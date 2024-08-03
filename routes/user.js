@@ -49,7 +49,7 @@ router.delete("/:id", async (req,res) =>{
 
 router.delete("/", async (req, res) => {
     try {
-        const result = await bookModel.deleteMany();
+        const result = await UserModel.deleteMany();
         res.status(200).json(result);
     } catch ({ message }) {
         res.json({ message });
